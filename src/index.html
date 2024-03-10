@@ -1,0 +1,91 @@
+<!--https://play.tailwindcss.com/GnKus8XVtH-->
+<main class="p-5">
+  <link href="output.css" rel="stylesheet">
+
+    <h1 class="text-center text-lg text-violet-400">hello world</h1>
+    <div class="w-full h-10 bg-violet-300 rounded-md my-4 p-2 border-violet-500 border-2 ">
+      <p class=" font-mono font-extrabold text-center text-[15px]">im sami</p>
+    </div>
+    <!--Layout -->
+    <div class="fixed w-10 h-10 bg-red-400 top-0">
+    </div>
+    <div>
+      <h3>Position</h3>
+      <ol>
+        <li> relative- shifts a bit from original position but everything else there is fixed </li>
+        <li> absolute - elements move independently acc to nearby parent or whole page</li>
+        <li> fixed- makes element stay locked in place</li>
+        <li> sticky- acts normal but when you scroll it s stuck to a place</li>
+      </ol>
+    </div>
+    <br>
+    <div>
+      <h3>Display</h3>
+      <ol>
+        <li> block </li>
+        <li> inline </li>
+        <li> inline block </li>
+        <li> none </li>
+        <li> flex </li>
+        <li> grid </li>
+    </div>
+  </br>
+  
+    <div class="flex justify-between ">
+      <div class="h-16 w-16 rounded-full  bg-violet-400"></div>
+      <div class="h-16 w-16 rounded-full  bg-violet-400"></div>
+      <div class="h-16 w-16 rounded-full  bg-violet-400"></div>
+    </div> 
+    <div class="grid grid-cols-3 gap-2 mt-3">
+      <div class="bg-violet-200 h-12"></div>
+      <div class="bg-violet-200 h-12"></div>
+      <div class="bg-violet-200 h-12"></div>
+      <div class="bg-violet-200 h-12"></div>
+      <div class="bg-violet-200 h-12"></div>
+    </div>
+  
+    <div class="md:block hidden my-7">
+      <p>I will appear for device resolution > 768px</p>
+    </div>
+    <div class="max-md:block hidden my-7">
+      <p>I will appear for device resolution < 768px</p>
+    </div>
+  
+    <button class="my-2 rounded-lg bg-blue-300 px-4 py-2 text-white hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-50 active:bg-blue-700">
+      Click me (nothing will happen) 
+    </button>
+  
+    <ul class="my-2 space-y-2">
+      <li class="bg-white p-2 first:bg-yellow-100">Item 1</li>
+      <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-300">Item 2</li>
+      <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-300">Item 3</li>
+      <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-300">Item 4</li>
+      <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-300">Item 5</li>
+      
+    </ul>
+  
+    <div class="m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black">
+      <h3 class="text-base font-medium tracking-tight text-slate-900 dark:text-white">This is a text element.</h3>
+      <p class="mt-2 text-sm text-slate-500 dark:text-blue-100" >This is an even longer p tag element</p>
+      <button
+      id="toggle-dark"
+      class="text-blue-900 px-4 py-2 text-sm font-mediu mt-8 bg-blue-100 rounded-md"
+      onclick="document.body.classList.toggle('dark')">Toggle dark mode</button>
+    </div>
+  </main>
+  
+  <!-- To showcase the demo of dark theme-->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleDark = document.getElementById('toggleDark')
+      toggleDark.addEventListener('click', function() {
+        if(document.documentElement.classList.includes('dark')) {
+          document.documentElement.classList.remove('dark')
+        }
+        else {
+          document.documentElement.classList.add('dark')
+        }
+        alert("click!")
+      });
+    });
+  </script>
